@@ -1,0 +1,40 @@
+defaults:
+  - data: islamiceval_task1_augmented
+
+
+model:
+  name: NAMAA-Space/AraModernBert-Base-V1.0
+  checkpoint: outputs/modernbert_lr2e5/checkpoint-296
+
+
+max_length: 2048
+
+
+output:
+  raw_path: predictions/raw.tsv
+  path: predictions/SanadAI_final.tsv
+
+
+postprocess:
+
+  merge_gap:
+    claimed_source: 5
+    ayah: 1
+    matn: 2
+    isnad: 1
+
+
+  min_length:
+    ayah: 10
+    matn: 10
+    isnad: 4
+    claimed_source: 4
+
+
+  thresholds:
+    ayah: 0.45
+    matn: 0.45
+    isnad: 0.45
+    claimed_source: 0.45
+
+  max_source_distance: 10

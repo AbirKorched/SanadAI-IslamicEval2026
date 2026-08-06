@@ -1,0 +1,12 @@
+dataset: AbirKorched9/IslamicEval2026-Task1
+
+train:
+  jsonl: v1.0/train.jsonl
+  tsv: v1.0/train.tsv
+
+dev:
+  jsonl: v1.0/dev.jsonl
+  tsv: v1.0/dev.tsv
+
+test:
+  jsonl: v1.0/test.jsonl
