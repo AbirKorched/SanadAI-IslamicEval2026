@@ -1,0 +1,16 @@
+scikit-learn==1.9.0
+RapidFuzz==3.14.5
+sentence-transformers
+transformers<5.0
+faiss-gpu
+gliner==0.2.27
+omegaconf
+tqdm
+PyArabic==0.6.15
+pandas==3.0.5
+numpy==2.4.6
+hydra-core==1.3.5
+datasets==5.0.0
+pydantic==2.13.4
+rich==15.0.0
+huggingface_hub==1.24.0

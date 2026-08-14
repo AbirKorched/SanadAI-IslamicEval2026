@@ -1,0 +1,12 @@
+dataset: AbirKorched9/IslamicEval2026-Task2
+
+dev:
+  jsonl: v1.0/dev.jsonl
+  tsv: v1.0/dev.tsv # combined dev_task_1.tsv and dev_task_2.tsv
+
+quran:
+  db: quran/quranic_verses.json
+
+hadith:
+  db: hadith/six_hadith_books.json
+  embeddings: hadith/hadith_embeddings_bge-m3.npy

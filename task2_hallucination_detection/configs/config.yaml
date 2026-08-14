@@ -1,0 +1,28 @@
+defaults:
+  - data: islamiceval_task2
+
+
+paths:
+  quran_prediction: outputs/quran_v2_combined_semanticScore_entityScore_fuzzyScore.tsv
+  hadith_prediction: outputs/hadith_combined_semanticScore_entityScore_fuzzyScore.tsv
+  hadith_scores: outputs/hadith_scores_before_thresholds.pkl
+  final_prediction: outputs/submission_v2.tsv
+
+models:
+  embedding: BAAI/bge-m3
+  ner: NAMAA-Space/gliner_arabic-v2.1
+
+hadith:
+  top_k: 2048
+  batch_size: 64
+
+  selected:
+    matn:
+      alpha: 0.45
+      threshold: 0.74
+    source:
+      alpha: 0.45
+      threshold: 0.17
+    isnad:
+      alpha: 0.0
+      threshold: 0.7

@@ -1,0 +1,6 @@
+output*
+*.pyc
+*.egg*
+*.jsonl
+*.tsv
+settings.json
